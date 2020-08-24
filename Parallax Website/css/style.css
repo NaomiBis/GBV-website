@@ -1,0 +1,240 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.pimg1,
+.pimg2,
+.pimg3,
+.pimg4,
+.pimg5,
+.pimg6{
+    position: relative;
+    opacity: 0.80;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*
+      fixed = parallax
+      srcoll = normal
+    */
+    background-attachment:  fixed;
+}
+
+.pimg1 {
+    background-image: url('../images/pride.jpg');
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url('../images/pride2.jpeg');
+    min-height: 200% ;
+}
+
+.pimg3 {
+    background-image: url('../images/pride3.jpeg') ;
+    min-height: 200%;
+}
+
+.pimg4 {
+    background-image: url('../images/pride7.jpg');
+    min-height: 200%;
+}
+.pimg5 {
+    background-image: url('../images/lgb.jpeg');
+    min-height: 200%;
+}
+
+.pimg6 {
+    background-image: url('../images/pride6.png');
+    min-height: 100%;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #e8e9eb;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #3e4247;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: rgb(83, 83, 83);
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+@media(max-width:560px) {
+
+    .pimg1,
+    .pimg2,
+    .pimg3,
+	.pimg4,
+    .pimg5,
+    .pimg6 {
+        background-attachment: scroll;
+    }
+}    
+
+/*styling the contact page*/
+.contactus{
+    position: static;
+	right:0;
+	top: 10px;
+	color: #3e4247(43, 32, 32);
+	padding: 0 60px;
+	display: none;	
+}
+
+.inputtext{
+	
+	width: 55%;
+	height: 60px;
+	border: 3px solid black;
+	color:white;
+	background-color: black;
+	font-size: 20px;
+	padding: 0 10px;
+	float: left;
+	margin-bottom: 30px;
+}
+
+.inputmessage{
+	
+	width: 50%;
+	height: 30px;
+	border: 3px solid black;
+	color: white;
+	background-color: black;
+	font-size: 20px;
+	padding: 0 10px;
+	float: left;
+}
+
+.submit{
+    width: 60%;
+	height: 65px;
+	font-family: arial;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	border: 3px solid #000000;
+	font-weight: bold;
+	float: left;
+	clear: both;
+	margin-top: 5px;
+}
+
+.slideshow{
+	margin:0 auto;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	height:300px;
+	box-sizing:border-box;
+}
+
+.contentz{
+	margin: auto;
+	width: 190px;
+	perspective: 1000px;
+	padding-top: 40px;
+	position: relative;
+	padding-bottom: 40px;
+}
+	
+	.content-carrousel{
+		width: 100%;
+		position:absolute;
+		float:right;
+		animation: rotar 20s infinite linear;
+		transform-style:preserve-3d;
+	}
+	
+.content-carrousel:hover{
+	animation-play-state:paused;
+	cursor: pointer;
+}
+
+.content-carrousel figure{
+	width:100%;
+	height:150px;
+	border: 1 px solid #4d444d;
+	overflow: hidden;
+	position:absolute;
+}
+.content-carrousel figure:nth-child(1){
+	transform:rotateY(0deg) translateZ(400px)
+}
+.content-carrousel figure:nth-child(2){
+	transform:rotateY(40deg) translateZ(400px)
+}
+.content-carrousel figure:nth-child(3){
+	transform:rotateY(80deg) translateZ(400px)
+}
+.content-carrousel figure:nth-child(4){
+	transform:rotateY(120deg) translateZ(400px)
+}
+.content-carrousel figure:nth-child(5){
+	transform:rotateY(160deg) translateZ(400px)
+}
+.content-carrousel figure:nth-child(6){
+	transform:rotateY(200deg) translateZ(400px)
+}
+.content-carrousel figure:nth-child(7){
+	transform:rotateY(240deg) translateZ(400px)
+}
+
+.shadow{
+	position:absolute;
+	box-shadow: 0px 0px 20px 0px #000;
+	border-radius: 2px;
+}
+.content-carrousel img{
+	image-rendering: auto;
+	transition: all 90ms;
+	width:100%;
+	height:100%;
+}
+
+.content-carrousel img:hover{
+	transform: scale(1.2);
+	transition: all 90ms;
+}
+
+@keyframes rotar{
+	form{
+		transform:rotateY(0deg);
+	} to {	
+	    transform:rotateY(240deg);
+	}
+}
+    
